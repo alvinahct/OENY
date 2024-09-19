@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OE Apotek - Sortiment</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col">
+    <!-- Banner at the top -->
+    <div class="bg-green-800 text-white py-2 px-4">
+        <div class="container mx-auto flex justify-center items-center">
+            <a href="oppettider.html" class="text-sm font-semibold hover:underline">
+                Se öppettider och gratis parkeringsalternativ!
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-green-800">OE Apotek</a>
+            <div class="flex items-center space-x-4">
+                <form role="search" class="relative">
+                    <input
+                        type="search"
+                        placeholder="Sök produkter..."
+                        class="w-full pl-10 pr-4 py-2 rounded-full border-green-800 focus:border-green-800 focus:ring focus:ring-green-500 focus:ring-opacity-50"
+                    />
+                    <button type="submit" class="absolute left-3 top-1/2 transform -translate-y-1/2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-800"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </form>
+                <a href="sortiment.html" class="text-green-800 hover:text-green-600">Sortiment</a>
+                <a href="oppettider.html" class="text-green-800 hover:text-green-600">Öppettider</a>
+                <a href="varukorg.html" class="text-green-800 hover:text-green-600">
+                    Varukorg (<span id="cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <h1 class="text-3xl font-bold text-green-800 mb-8">Vårt Sortiment</h1>
+        
+        <!-- Sort Dropdown -->
+        <div class="mb-4">
+            <select id="sort-select" class="w-full sm:w-[180px] rounded-full border-green-800 focus:border-green-800 focus:ring focus:ring-green-500 focus:ring-opacity-50">
+                <option value="default">Sortera efter</option>
+                <option value="price-asc">Pris: Lägst först</option>
+                <option value="price-desc">Pris: Högst först</option>
+                <option value="popularity">Popularitet</option>
+            </select>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product items will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-start">
+                <div class="mb-8 md:mb-0 md:w-1/2">
+                    <h3 class="text-2xl font-bol d mb-6 text-green-300">Kontakta oss</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-green-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                            <p class="text-lg">Ringugnsgatan 14 B, 216 16 Limhamn</p>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-green-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <p class="text-lg">073-305 26 01</p>
+                        </div>
+                        <div class="flex items-center">
+                            Color">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 @oeapotek.se</p>
+                        </div>
+                    </div>
+                </div>
+                300">Hitta hit</h3>
+                    <div class="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ska%CC%88rmavbild%202024-09-16%20kl.%2016.09.22-ZMd2iXFUVpTts1fEx3Qm2GQ1BCOjpf.png" alt="Karta över Limhamn OE Apotek" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </divfixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        </svg>
+    </a>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
